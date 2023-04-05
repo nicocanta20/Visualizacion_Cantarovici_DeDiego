@@ -10,7 +10,8 @@
   <body>
     <nav>
         <ul class="navbar">
-          <li><a href="https://github.com/nicocanta20/Visualizacion_Cantarovici_DeDiego">Github</a></li>
+            <li class ="home">Lorem ipsum dolor sit amet</li>
+          <li class="github"><a href="https://github.com/nicocanta20/Visualizacion_Cantarovici_DeDiego">Github</a></li>
         </ul>
       </nav>
     <div class="container">
@@ -58,4 +59,11 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet lorem vitae purus gravida facilisis. Aliquam nec enim non tortor hendrerit feugiat at in velit. Donec hendrerit massa quis sapien sodales, a pellentesque sapien malesuada.</p>
       </footer>
   </body>
+  <script>
+    window.addEventListener("scroll", function() {
+      var nav = document.querySelector("nav");
+        
+      nav.classList.toggle("scrolled", window.scrollY > 150);
+    });
+  </script>
 </html>
