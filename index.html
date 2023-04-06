@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Parcial Visualizacion - Cantarovici, De Diego</title>
+    <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
     <link rel="stylesheet" href="styles.css">
@@ -11,7 +11,10 @@
     <nav>
         <ul class="navbar">
             <li class ="home">Lorem ipsum dolor sit amet</li>
-          <li class="github"><a href="https://github.com/nicocanta20/Visualizacion_Cantarovici_DeDiego">Github</a></li>
+          <!-- <li class="github"><a href="https://github.com/nicocanta20/Visualizacion_Cantarovici_DeDiego">Github</a></li> -->
+          <li><button onclick="redirectToPage()" id="github" class="github"></button></li>
+          <li><button onclick="myFunction()" id="toggle"></button></li>
+          
         </ul>
       </nav>
     <div class="container">
@@ -24,29 +27,30 @@
         <a class="button" href="#section3"><h3>Title of Graph 3</h3></a>
       </div>
     </div>
-    <div class="big">
-      <div class="section" id="section1">
+    <div class="big" id="section1">
+      <div class="section" >
         <h2 class="section-title">Title of Graph 1</h2>
-        <!-- <div class="graph" id="graph1"></div> -->
+        <!-- <div id="chart"></div> -->
         <div class="chart-container">
             <img src="./assets/prox.png" alt="Graph 1">
           </div>
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet lorem vitae purus gravida facilisis. Aliquam nec enim non tortor hendrerit feugiat at in velit. Donec hendrerit massa quis sapien sodales, a pellentesque sapien malesuada.</p>
       </div>
     </div>
-    <div class="big">
-      <div class="section" id="section2">
+    <div class="big" id="section2">
+      <div class="section" >
         <h2 class="section-title">Title of Graph 2</h2>
-        <!-- <div class="graph" id="graph2"></div> -->
-        <!-- <div class="chart-container"> -->
+        <!-- <div id="chart"></div> -->
+        <div class="chart-container">
             <img src="./assets/prox.png" alt="Graph 1">
-          <!-- </div> -->
+           </div>
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet lorem vitae purus gravida facilisis. Aliquam nec enim non tortor hendrerit feugiat at in velit. Donec hendrerit massa quis sapien sodales, a pellentesque sapien malesuada.</p>
       </div>
     </div>
-    <div class="big">
-      <div class="section" id="section3">
+    <div class="big" id="section3">
+      <div class="section" >
         <h2 class="section-title">Title of Graph 3</h2>
+         <!-- <div id="chart"></div> -->
         <!-- <div class="graph" id="graph3"></div> -->
         <div class="chart-container">
             <img src="./assets/prox.png" alt="Graph 1">
@@ -58,12 +62,42 @@
     <footer>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet lorem vitae purus gravida facilisis. Aliquam nec enim non tortor hendrerit feugiat at in velit. Donec hendrerit massa quis sapien sodales, a pellentesque sapien malesuada.</p>
       </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+
+
+
   </body>
   <script>
     window.addEventListener("scroll", function() {
       var nav = document.querySelector("nav");
         
-      nav.classList.toggle("scrolled", window.scrollY > 150);
+      nav.classList.toggle("scrolled", window.scrollY > 310);
     });
-  </script>
+
+    function myFunction() {
+    // var element = document.body;
+    // element.classList.toggle("dark-mode");
+    var element = document.body;
+  element.classList.toggle("dark-mode");
+  
+  var image = document.getElementById("theme-toggle");
+  if (image.src.match("sun")) {
+    image.src = "moon.png";
+  } else {
+    image.src = "sun.png";
+  }
+    }
+
+function redirectToPage() {
+  window.location.href = "https://github.com/nicocanta20/Visualizacion_Cantarovici_DeDiego"; // replace with your desired URL
+}
+
+
+  </script >
 </html>
+
