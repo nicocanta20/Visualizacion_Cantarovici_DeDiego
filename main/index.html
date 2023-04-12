@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/news.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav>
+        <ul class="navbar">
+            <li class ="home">Lorem ipsum dolor sit amet</li>
+          <!-- <li class="github"><a href="https://github.com/nicocanta20/Visualizacion_Cantarovici_DeDiego">Github</a></li> -->
+          <li><button onclick="redirectToPage()" id="github" class="github"></button></li>
+          <li><button onclick="toggleDark()" id="toggle"></button></li>
+          
+        </ul>
+      </nav>
+    <div class="container">
+    <div class="first">
+      <h1 class="title">Lorem ipsum dolor sit amet</h1>
+      <p class="subtitle">Consectetur adipiscing elit</p>
+      <div class="button-container">
+        <a class="button" href="#section1"><h3>Title of Graph 1</h3></a>
+        <a class="button" href="#section2"><h3>Title of Graph 2</h3></a>
+        <a class="button" href="#section3"><h3>Title of Graph 3</h3></a>
+      </div>
+    </div>
+    <div >
+      <!-- <img class="path-line" src="./assets/path2.png" alt="Path"> -->
+    </div>
+    <div class="big" id="section1">
+      <div class="section" >
+        <h2 class="section-title">Title of Graph 1</h2>
+        <div id="chart"></div>
+        <!-- <div class="chart-container">
+            <img class="prox" src="../assets/prox.png" alt="Graph 1">
+          </div> -->
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet lorem vitae purus gravida facilisis. Aliquam nec enim non tortor hendrerit feugiat at in velit. Donec hendrerit massa quis sapien sodales, a pellentesque sapien malesuada.</p>
+      </div>
+    </div>
+    <div class="big" id="section2">
+      <div class="section" >
+        <h2 class="section-title">Title of Graph 2</h2>
+
+        <div>
+          <!-- <label for="domicilio-barrio-select">Elegir un barrio:</label> -->
+          <select id="domicilio-barrio-select">
+            <option value="Parque Avellaneda">Parque Avellaneda</option>
+    <option value="Agronomia">Agronomia</option>
+    <option value="Villa Del Parque">Villa Del Parque</option>
+    <option value="Parque Chacabuco">Parque Chacabuco</option>
+    <option value="Villa Crespo">Villa Crespo</option>
+    <option value="Villa Devoto">Villa Devoto</option>
+    <option value="Almagro">Almagro</option>
+    <option value="Belgrano">Belgrano</option>
+    <option value="Liniers">Liniers</option>
+    <option value="Balvanera">Balvanera</option>
+    <option value="Boedo">Boedo</option>
+    <option value="Villa Pueyrredon">Villa Pueyrredon</option>
+    <option value="Villa Gral. Mitre">Villa Gral. Mitre</option>
+    <option value="Nuñez">Nuñez</option>
+    <option value="Mataderos">Mataderos</option>
+    <option value="Caballito">Caballito</option>
+    <option value="Villa Riachuelo">Villa Riachuelo</option>
+    <option value="Chacarita">Chacarita</option>
+    <option value="Floresta">Floresta</option>
+    <option value="Parque Chas">Parque Chas</option>
+    <option value="Villa Urquiza">Villa Urquiza</option>
+    <option value="Monserrat">Monserrat</option>
+    <option value="Nueva Pompeya">Nueva Pompeya</option>
+    <option value="Retiro">Retiro</option>
+    <option value="Villa Santa Rita">Villa Santa Rita</option>
+    <option value="San Nicolas">San Nicolas</option>
+    <option value="Villa Luro">Villa Luro</option>
+    <option value="Monte Castro">Monte Castro</option>
+    <option value="Colegiales">Colegiales</option>
+    <option value="Palermo">Palermo</option>
+    <option value="Coghlan">Coghlan</option>
+    <option value="Parque Patricios">Parque Patricios</option>
+    <option value="Saavedra">Saavedra</option>
+    <option value="Flores">Flores</option>
+    <option value="Versalles">Versalles</option>
+    <option value="Barracas">Barracas</option>
+    <option value="Recoleta">Recoleta</option>
+    <option value="Villa Ortuzar">Villa Ortuzar</option>
+    <option value="Villa Lugano">Villa Lugano</option>
+    <option value="Constitucion">Constitucion</option>
+    <option value="Villa Real">Villa Real</option>
+    <option value="Boca">Boca</option>
+    <option value="Villa Soldati">Villa Soldati</option>
+    <option value="Paternal">Paternal</option>
+    <option value="Velez Sarsfield">Velez Sarsfield</option>
+    <option value="San Cristobal">San Cristobal</option>
+    <option value="San Telmo">San Telmo</option>
+    <option value="Puerto Madero">Puerto Madero</option>
+          </select>
+        </div>
+
+
+        <div id="chart2"></div>
+        <!-- <div class="chart-container">
+            <img class="prox" src="../assets/prox.png" alt="Graph 1">
+           </div> -->
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet lorem vitae purus gravida facilisis. Aliquam nec enim non tortor hendrerit feugiat at in velit. Donec hendrerit massa quis sapien sodales, a pellentesque sapien malesuada.</p>
+      </div>
+    </div>
+    <div class="big" id="section3">
+      <div class="section" >
+        <h2 class="section-title">Title of Graph 3</h2>
+         <!-- <div id="chart"></div> -->
+        <!-- <div class="graph" id="graph3"></div> -->
+        <div class="chart-container">
+            <img class="prox" src="../assets/prox.png" alt="Graph 1">
+          </div>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet lorem vitae purus gravida facilisis. Aliquam nec enim non tortor hendrerit feugiat at in velit. Donec hendrerit massa quis sapien sodales, a pellentesque sapien malesuada.</p>
+      </div>
+    </div>
+    </div>
+
+    <footer>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet lorem vitae purus gravida facilisis. Aliquam nec enim non tortor hendrerit feugiat at in velit. Donec hendrerit massa quis sapien sodales, a pellentesque sapien malesuada.</p>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
+    <script src="donut.js"></script>
+    <script src="bar.js"></script>
+
+
+
+  </body>
+  <script>
+    window.addEventListener("scroll", function() {
+      var nav = document.querySelector("nav");
+        
+      nav.classList.toggle("scrolled", window.scrollY > 310);
+    });
+
+    function toggleDark() {
+    var element = document.body;
+  element.classList.toggle("dark-mode");
+
+
+    }
+
+function redirectToPage() {
+  window.location.href = "https://github.com/nicocanta20/Visualizacion_Cantarovici_DeDiego"; // replace with your desired URL
+}
+
+  </script >
+</html>
+

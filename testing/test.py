@@ -25,7 +25,10 @@ def graph(df):
     plt.show()
 
 
-df1 = pd.read_csv("147_desratizacion.csv", delimiter=';')
-df2 = pd.read_csv("147_ruidos_molestos.csv", delimiter=';')
+# df1 = pd.read_csv("147_desratizacion.csv", delimiter=';')
+# df2 = pd.read_csv("147_ruidos_molestos.csv", delimiter=';')
 df = pd.read_csv("merged.csv")
-graph(df)
+
+# from merged.csv get all the different domicilio_barrio
+barrios = df.domicilio_barrio.unique()
+print(len(barrios))
