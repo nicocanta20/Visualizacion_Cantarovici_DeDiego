@@ -54,8 +54,8 @@ function updateChart(domicilio_barrio) {
       width: 1100,
       height: 800,
       style: {
-        "background-color": "#0e0e0e",
-        color: "white",
+        "background-color": 'rgba(255, 255, 255, 0)',
+        color: "black",
         // "font-family": "Supreme",
         "font-size": "16px",
         // "margin-top": "30px",
@@ -64,8 +64,8 @@ function updateChart(domicilio_barrio) {
     });
 
     // Remove the previous chart before appending the new one
-    d3.select('#chart2').selectAll('*').remove();
-    d3.select('#chart2').append(() => chart);
+    d3.select('#chartX').selectAll('*').remove();
+    d3.select('#chartX').append(() => chart);
   });
 }
 

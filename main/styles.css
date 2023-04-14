@@ -3,13 +3,13 @@ html{
 }
 
 body {
-    background-color: white;
+    background-color: rgb(237, 236, 236);
     font-family: 'Supreme', sans-serif;
     color: black;
     margin: 0;
     padding: 0;
     /* add image to background */
-    background-image: url("../assets/back.png");
+    /* background-image: url("../assets/back.png"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -18,7 +18,7 @@ body {
   /* dark mode toggle and button */
   .dark-mode {
     background-color: #0d0d0d;
-    color: rgb(247, 247, 247);
+    color: rgb(234, 232, 232);
 
   }
 
@@ -39,12 +39,27 @@ body {
     background-image: url('../assets/moon.png');
   }
 
+  .dark-mode .big{
+    background-color: #0e0e0e;
+  }
+
+  .dark-mode .section-title{
+    color: white;
+  }
+  .dark-mode .description{
+    color: white;
+  }
+
 
 /* wrap all components */
 .container {
-max-width: 1200px;
-margin: 0 auto;
+display: flex;
+/* max-width: 1200px; */
+/* margin: 0 auto; */
+align-items: center;
 text-align: center;
+flex-direction: column;
+
 }
 
 
@@ -119,15 +134,15 @@ nav {
 
 /* first part of the landing */
 .first{
-    margin-top: 300px;
-    margin-bottom: 480px;
+    /* margin-top: 100px; */
     justify-content: center;
-align-items: center;
+    align-items: center;
+    padding: 100px;
 }
 
 .title {
     font-size: 60px;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     margin-bottom: 20px;
     }
 
@@ -139,7 +154,7 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 align-items: center;
-max-width: 90%;
+/* max-width: 90%; */
 margin: 0 auto;
 /* margin-bottom: 100px; */
 text-align: left;
@@ -150,19 +165,19 @@ text-align: left;
 position:relative;
 max-width: 1000px;
 margin: 0 60px;
-padding: 40px;
+/* padding: 40px; */
 border-radius: 15px;
-background-color: rgb(14, 14, 14);
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-margin-bottom: 75px;
-margin-top: 75px;
+background-color:rgb(237, 236, 236);
+/* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); */
+margin-bottom: 150px;
+/* margin-top: 75px; */
 }
 
 .section-title{
-color: white;
+color: #0e0e0e;
 }
 .description{
-color: white;
+color: #0e0e0e;
 }
 
 
@@ -218,6 +233,10 @@ max-width: 100%;
 display: inline-block;
 }
 
+.paragraph{
+  margin: 0 100px;
+}
+
 
 
 .graph-title {
@@ -251,7 +270,7 @@ padding: 0 100px;
 border-width: 3px;
 border-style: solid;
 border-radius: 0px 0px 5px 5px;
-height: 100px;
+height: 200px;
 }
 
 footer p {
@@ -288,8 +307,8 @@ div#chart{
 
 /* chart 2 */
 div#chart2{
- 
-  width: 80%;
+  display: flex;
+  justify-content: center;
 }
 
 /* make this selectbox pretty: <select id="domicilio-barrio-select"> */
@@ -298,4 +317,11 @@ select#domicilio-barrio-select {
   color: #fff;
   padding: 4px;
   border-radius: 8px; 
+}
+
+.header {
+  background-image: url("../assets/header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
 }
