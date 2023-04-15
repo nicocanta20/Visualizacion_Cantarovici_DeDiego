@@ -23,14 +23,14 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       domain: barrios, // Objeto GeoJson a encuadrar
     },
     color: {
-      // Quantize continuo (cant. denuncias) -> discreto (cant. colores)
-      type: 'quantize', 
-      n: 10,
-      scheme: 'category10',
+      // Use a custom color scale with red colors and different gradients
+      type: 'linear',
+      domain: [0, d3.max(barrios.features, d => d.properties.COUNTS)],
+      range: ['#ffffff', '#e32929'],
       label: 'Cantidad de denuncias',
-      legend: true,
-      // remove background
-      background: '#ffffff00',
+      legend: {
+        background: '#ffffff00'
+      },
     },
     marks: [
       Plot.geo(barrios, {
@@ -58,8 +58,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
     }
   })
 
-  /* Agregamos al DOM la visualización chartMap */
-  d3.select('#chart3').append(() => chartMap)
 
-
+   /* Agregamos al DOM la visualización chartMap */
+   d3.select('#chart3').append(() => chartMap)
 })

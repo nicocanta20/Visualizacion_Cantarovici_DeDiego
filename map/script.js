@@ -16,6 +16,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
 
 
   /* Mapa Coroplético */
+  // const redColors = ["#FFD0D0", "#FFB6B6", "#FF9C9C", "#FF8282", "#FF6868", "#FF4E4E", "#FF3434", "#FF1A1A", "#FF0000"]
   let chartMap = Plot.plot({
     // https://github.com/observablehq/plot#projection-options
     projection: {
@@ -23,10 +24,10 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       domain: barrios, // Objeto GeoJson a encuadrar
     },
     color: {
-      // Quantize continuo (cant. denuncias) -> discreto (cant. colores)
-      type: 'quantize', 
-      n: 10,
-      scheme: 'category10',
+      // Use a custom color scale with red colors and different gradients
+      type: 'linear',
+      domain: [0, d3.max(barrios.features, d => d.properties.COUNTS)],
+      range: ['#FFD6D6', '#FF0000'],
       label: 'Cantidad de denuncias',
       legend: true,
     },
