@@ -1,3 +1,16 @@
+/* import fonts locally*/
+@font-face {
+    font-family: 'Panchang';
+    src: url('../fonts/Panchang-Regular.otf');
+  }
+  
+  @font-face {
+    font-family: 'Ranade';
+    src: url('../fonts/Ranade-Regular.otf');
+  }
+
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -144,6 +157,7 @@ nav {
     font-size: 60px;
     /* margin-top: 100px; */
     margin-bottom: 20px;
+    font-weight: bold;
     }
 
   
@@ -320,7 +334,7 @@ select#domicilio-barrio-select {
 }
 
 .header {
-  background-image: url("../assets/header.png");
+  background-image: url("../assets/sky.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;

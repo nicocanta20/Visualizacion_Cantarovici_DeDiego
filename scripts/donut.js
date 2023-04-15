@@ -27,7 +27,7 @@ function createChart() {
   }
 
   // Load the data
-  d3.csv("../testing/rata_clean.csv").then(function (data) {
+  d3.csv("../data/rata_clean.csv").then(function (data) {
     // Process the data with an alternative rollup function
     let domicilio_barrioCount = d3.group(data, d => d.domicilio_barrio);
     let counts = Array.from(domicilio_barrioCount, ([key, value]) => ({ key, counts: d3.sum(value, d => parseInt(d.counts)) }));
@@ -35,6 +35,7 @@ function createChart() {
     var color = d3.scaleOrdinal()
       .domain(counts.map(d => d.key))
       .range(d3.quantize(t => d3.interpolateTurbo(t * 0.8 + 0.1), counts.length).reverse())
+      // .range(["#AFEEEE", "#00FFFF", "#00CED1", "#ADD8E6", "#87CEFA", "#6495ED", "#1E90FF", "#008080", "#006400", "#2E8B57", "#008000", "#003366"]);
 
     const arcs = pie(counts);
 

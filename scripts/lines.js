@@ -1,4 +1,4 @@
-d3.csv('../testing/ranking_barrios.csv', d3.autoType).then(data => {
+d3.csv('../data/ranking_barrios.csv', d3.autoType).then(data => {
 
   const data2 = []
   const monthData = ['','1 - Enero','2 - Febrero','3 - Marzo','4 - Abril','5 - Mayo']
@@ -46,6 +46,7 @@ d3.csv('../testing/ranking_barrios.csv', d3.autoType).then(data => {
     },
     color: {
       scheme: 'category10',
+      // range: ["#ADD8E6", "#00BFFF", "#008080", "#006400", "#003366"],
       type: 'categorical',
       legend: true,
       fontSize: 50,

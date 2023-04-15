@@ -1,5 +1,5 @@
-const mapaFetch = d3.json('../map/barrios-caba.geojson')
-const dataFetch = d3.csv('../testing/rata_clean_total.csv', d3.autoType)
+const mapaFetch = d3.json('../data/barrios-caba.geojson')
+const dataFetch = d3.csv('../data/map_ratas.csv', d3.autoType)
 
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
 
@@ -26,7 +26,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       // Use a custom color scale with red colors and different gradients
       type: 'linear',
       domain: [0, d3.max(barrios.features, d => d.properties.COUNTS)],
-      range: ['#ffffff', '#e32929'],
+      range: ['#ffffff', "blue"],
       label: 'Cantidad de denuncias',
       legend: true,
       background: '#transparent',
