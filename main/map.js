@@ -28,9 +28,8 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       domain: [0, d3.max(barrios.features, d => d.properties.COUNTS)],
       range: ['#ffffff', '#e32929'],
       label: 'Cantidad de denuncias',
-      legend: {
-        background: '#ffffff00'
-      },
+      legend: true,
+      background: '#transparent',
     },
     marks: [
       Plot.geo(barrios, {
