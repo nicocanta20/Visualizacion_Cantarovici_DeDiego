@@ -18,28 +18,44 @@
   <body>
     <nav>
         <ul class="navbar">
-            <li class ="home">La Bonaerense</li>
+            <li class ="home">The BA insider</li>
           <!-- <li class="github"><a href="https://github.com/nicocanta20/Visualizacion_Cantarovici_DeDiego">Github</a></li> -->
-          <li><button onclick="redirectToPage()" id="github" class="github"></button></li>
+          <!-- <li><button onclick="redirectToPage()" id="github" class="github"></button></li> -->
           <li><button onclick="toggleDark()" id="toggle"></button></li>
           
         </ul>
       </nav>
-      <div class="header"></div>
+
+
+      <div class="site-header">
+        <div class="header-container">
+          <div class="header-title">
+            <h1>Buenos Aires en alerta por el aumento de la población de ratas</h1>
+          </div>
+          <div class="header-subtitle">
+            <div class="header-image">
+              <img src="https://placehold.it/700x500" alt="Header Image">
+            </div>
+            <div class="header-text">
+              <h3>En los últimos meses, los residentes de varias zonas de la provincia de Buenos Aires han presentado quejas sobre la presencia de ratas en sus hogares y comunidades. Esta problemática ha generado preocupación y demanda de soluciones efectivas por parte de las autoridades y la población en general. Este artículo revela de manera clara y objetiva la prevalencia de quejas por presencia de ratas en diversas zonas de la provincia , utilizando gráficos y estadísticas impactantes para brindar una visión detallada de la situación.</h3>
+              <p >By Nicolas Cantarovici and Valentina de Diego - April 15th, 2023</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+
+      <!-- <div class="header"></div> -->
     <div class="container">
-    <div class="first">
-      <h1 class="title" >La Bonaerense</h1>
+    <!-- <div class="first">
+      <h1 class="title" >BA insider</h1>
       <p >By Nicolas Cantarovici and Valentina de Diego - April 15th, 2023</p>
       <p class="subtitle">Explorando la diversidad de la provincia de Buenos Aires</p>
       <p class="paragraph">En los últimos meses, los residentes de varias zonas de la provincia de Buenos Aires han presentado quejas sobre la presencia de ratas en sus hogares y comunidades. Esta problemática ha generado preocupación y demanda de soluciones efectivas por parte de las autoridades y la población en general. Este artículo revela de manera clara y objetiva la prevalencia de quejas por presencia de ratas en diversas zonas de la provincia , utilizando gráficos y estadísticas impactantes para brindar una visión detallada de la situación.</p>
-      <!-- <div class="button-container">
-        <a class="button" href="#section1"><h3>Title of Graph 1</h3></a>
-        <a class="button" href="#section2"><h3>Title of Graph 2</h3></a>
-        <a class="button" href="#section3"><h3>Title of Graph 3</h3></a>
-      </div> -->
-    </div>
+    </div> -->
     <div >
-      <!-- <img class="path-line" src="./assets/path2.png" alt="Path"> -->
     </div>
     <div class="big" id="section1">
       <div class="section" >
@@ -70,7 +86,23 @@
     </div>
 
     <footer>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet lorem vitae purus gravida facilisis. Aliquam nec enim non tortor hendrerit feugiat at in velit. Donec hendrerit massa quis sapien sodales, a pellentesque sapien malesuada.</p>
+      <div id="footer_contents">
+      <div id="footer_integrantes">
+        <h1>Integrantes</h1>
+        <p>Nicolas Cantarovici</p>
+        <p>Valentina De Diego</p>
+      </div>
+      <div id="footer_links">
+        <div id="footer_icons">
+          <a class="icon_ref" href="https://www.utdt.edu/">
+            <img class="icon" src="assets/utdt.svg" alt="UTDT" />
+          </a>
+          <a class="icon_ref" href="https://github.com/nicocanta20/Visualizacion_Cantarovici_DeDiego">
+            <img class="icon" src="assets/gh.svg" alt="GitHub" />
+          </a>
+        </div>
+      </div>
+    </div>
       </footer>
 
       <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
@@ -87,7 +119,7 @@
     window.addEventListener("scroll", function() {
       var nav = document.querySelector("nav");
         
-      nav.classList.toggle("scrolled", window.scrollY > 310);
+      nav.classList.toggle("scrolled", window.scrollY > -1);
     });
 
     function toggleDark() {
