@@ -15,11 +15,8 @@ html{
     scroll-behavior: smooth;
 }
 
-.text-center[size=-1] {
-  text-align: center;
-}
 
-.description {
+.description{
   margin-top: 30px;
 }
 
@@ -131,7 +128,7 @@ nav {
         font-size: 28px;
         font-weight: bold;
       }
-    
+/*     
     .github{
         position: absolute;
         right: 50px;
@@ -145,7 +142,7 @@ nav {
         background-color: #0e0e0e;
         cursor: pointer;
         
-    }
+    } */
 
 /* first part of the landing */
 .first{
@@ -161,6 +158,13 @@ nav {
     margin-bottom: 20px;
     font-weight: bold;
     }
+
+p.img-description{
+  color: #626262;
+  margin: 0;
+}
+
+
 
   
 
@@ -180,6 +184,7 @@ text-align: left;
 .big{
 position:relative;
 max-width: 1000px;
+width: 1000px;
 margin: 0 60px;
 /* padding: 40px; */
 border-radius: 15px;
@@ -197,15 +202,11 @@ color: #0e0e0e;
 }
 
 
-.button-container{
+/* .button-container{
 display: grid;
 grid-template-columns:32% 32% 32%;
 justify-content: center;
-/* max-width: 1000px; */
-/* padding: 40px; */
-/* margin-bottom: 500px; */
 grid-column-gap: 30px;
-/* grid-gap: auto; */
 height: 75px;}
 
 
@@ -231,7 +232,7 @@ text-decoration: none;
     color: #000;
     border-color: #000;
     border-width: 3px;
-}
+} */
 
 img.prox{
 width: 100%;
@@ -269,8 +270,8 @@ margin-bottom: 50px;
 
 
 .graph-description {
-font-size: 20px;
-margin-bottom: 100px;
+font-size: 14px;
+color: #3d3d3d;
 }
 
 
@@ -459,3 +460,4 @@ strong{
   color: blue;
   font-weight: bold;
 }
+
