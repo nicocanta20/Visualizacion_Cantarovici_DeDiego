@@ -1,5 +1,5 @@
 const mapaFetch = d3.json('../data/barrios-caba.geojson')
-const dataFetch = d3.csv('../data/map_ratas.csv', d3.autoType)
+const dataFetch = d3.csv('../data/map_ratas_normalized.csv', d3.autoType)
 
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
 
@@ -8,8 +8,10 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
     let nombreBarrio = feature.properties.BARRIO
     console.log('nombreBarrio', nombreBarrio)
     let cantReclamos =  data.find((d)=> d.domicilio_barrio == nombreBarrio)
+    let ratioReclamos = data.find((d)=> d.domicilio_barrio == nombreBarrio)
     // d.properties.DENUNCIAS = cantReclamos.counts
     feature.properties.COUNTS = cantReclamos.counts
+    feature.properties.RATIO = ratioReclamos.ratio
 
     console.log(nombreBarrio + ': ' + cantReclamos)
   })
@@ -25,15 +27,16 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
     color: {
       // Use a custom color scale with red colors and different gradients
       type: 'linear',
-      domain: [0, d3.max(barrios.features, d => d.properties.COUNTS)],
+      domain: [0, d3.max(barrios.features, d => d.properties.RATIO)],
       range: ['#ffffff', "blue"],
       label: 'Cantidad de denuncias',
       legend: true,
-      background: '#transparent',
+      color: 'black',
+      
     },
     marks: [
       Plot.geo(barrios, {
-        fill: d => d.properties.COUNTS,
+        fill: d => d.properties.RATIO,
         stroke: 'gray',
         title: d => `${d.properties.BARRIO}\n${d.properties.COUNTS} denuncias`,
       }),
@@ -45,7 +48,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
           stroke: "white",
           textAnchor: "center",
           dx: 4,
-          filter: (d) => d.properties.COUNTS > 80
+          filter: (d) => d.properties.RATIO > 2
         })
       )
     ],
@@ -53,7 +56,6 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       fontFamily: 'Supreme',
       background: '#ffffff00',
       color: '#0e0e0e',
-      
     }
   })
 
