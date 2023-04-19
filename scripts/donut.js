@@ -47,7 +47,7 @@ function createChart() {
       .attr("fill", d => color(d.data.key))
       .attr("d", arc)
       .append("title")
-      .text(d => `${d.data.key}: ${d.data.counts.toLocaleString()}`);
+      .text(d => `${d.data.key}: ${d.data.counts.toString()}`);
 
     svg.append("g")
       .attr("font-family", "sans-serif")
@@ -65,7 +65,7 @@ function createChart() {
         .attr("x", 0)
         .attr("y", "0.7em")
         .attr("fill-opacity", 0.7)
-        .text(d => d.data.counts.toLocaleString() ));
+        .text(d => d.data.counts.toString() ));
   }).catch(function (error) {
     console.log(error);
   });

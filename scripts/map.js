@@ -60,5 +60,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
 
 
    /* Agregamos al DOM la visualización chartMap */
+   d3.select(".plot-1be9c9ca248f2")
+  .style("background-color", "transparent");
    d3.select('#chart3').append(() => chartMap)
 })

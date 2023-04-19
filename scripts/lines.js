@@ -38,8 +38,10 @@ d3.csv('../data/ranking_barrios.csv', d3.autoType).then(data => {
         title: 'barrio'
       }),
     ],
+    line:true,
     x: {
-      label: 'Mes'
+      label: '',
+
     },
     y: {
       label: 'Cantidad por Barrios',
@@ -49,7 +51,8 @@ d3.csv('../data/ranking_barrios.csv', d3.autoType).then(data => {
       // range: ["#ADD8E6", "#00BFFF", "#008080", "#006400", "#003366"],
       type: 'categorical',
       legend: true,
-      fontSize: 50,
+
+    
       
     },
     style: {
@@ -57,6 +60,7 @@ d3.csv('../data/ranking_barrios.csv', d3.autoType).then(data => {
       fontSize:20,
       background: '#ffffff00',
       color: '#0e0e0e',
+  
       
     },
     height: 600,

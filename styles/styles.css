@@ -1,13 +1,9 @@
 /* import fonts locally*/
 @font-face {
-    font-family: 'Panchang';
-    src: url('../fonts/Panchang-Regular.otf');
+    font-family: 'Supreme';
+    src: url('../fonts/Supreme-Regular.otf');
   }
   
-  @font-face {
-    font-family: 'Ranade';
-    src: url('../fonts/Ranade-Regular.otf');
-  }
 
 
 
@@ -461,3 +457,19 @@ strong{
   font-weight: bold;
 }
 
+#chart{
+  /* background-color: white; */
+  padding-top:20px;
+  padding-bottom: 10px;
+  /* border-radius: 10px; */
+}
+#chart2{
+  /* background-color: white; */
+  /* border-radius: 10px; */
+  padding: 10px;
+}
+
+/* #chart3{
+  background-color: white;
+  border-radius: 10px;
+} */
