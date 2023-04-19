@@ -15,6 +15,12 @@ d3.csv('../data/ranking_barrios.csv', d3.autoType).then(data => {
     }
   }
 
+console.log(data2)
+
+  const tooltip = d3.select("body")
+  .append("div")
+  .attr("class", "tooltip");
+
   // Plot the data
   // X axis: month
   // Y axis: quantity of barrios
@@ -74,16 +80,32 @@ d3.csv('../data/ranking_barrios.csv', d3.autoType).then(data => {
     }
   );
 
-  // Apply the hover effect to the lines
-  d3.select(chart)
-    .selectAll("path")
-    .on("pointerenter", function () {
-      d3.select(chart).selectAll("path").attr("opacity", 0.2);
-      d3.select(this).attr("opacity", 1);
-    });
-  d3.select(chart).on("pointerleave", function () {
-    d3.select(chart).selectAll("path").attr("opacity", 1);
+
+d3.select(chart)
+  .selectAll("path")
+  .on("pointerenter", function (event, d) {
+    d3.select(chart).selectAll("path").attr("opacity", 0.2);
+    d3.select(this).attr("opacity", 1);
+    tooltip
+      .style("opacity", 1)
+      .html(data2[d[0]].barrio);
   });
+
+d3.select(chart).on("pointerleave", function () {
+  d3.select(chart).selectAll("path").attr("opacity", 1);
+
+  // Oculta el tooltip
+  tooltip.style("opacity", 0);
+});
+
+// Actualiza la posición del tooltip mientras el cursor se mueve
+d3.select(chart)
+  .on("mousemove", function (event) {
+    tooltip
+      .style("left", event.pageX + 10 + "px")
+      .style("top", event.pageY - 30 + "px");
+  });
+
 
 
   d3.select('#chart2').append(() => chart)
