@@ -29,10 +29,9 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       type: 'linear',
       domain: [0, d3.max(barrios.features, d => d.properties.RATIO)],
       range: ['#ffffff', "blue"],
-      label: 'Cantidad de denuncias',
+      label: 'Cantidad de denuncias por cada mil personas',
       legend: true,
       color: 'black',
-      
     },
     marks: [
       Plot.geo(barrios, {
