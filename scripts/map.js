@@ -18,7 +18,8 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
 
 
   /* Mapa Coroplético */
-  let chartMap = Plot.plot({
+
+  let chartMap = addTooltips(Plot.plot({
     // https://github.com/observablehq/plot#projection-options
     projection: {
       type: 'mercator',
@@ -56,8 +57,12 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       background: '#ffffff00',
       color: '#0e0e0e',
     }
-  })
-
+  }),
+    hover_styles = {
+      fill: 'rgba(0, 50, 255, 0.700)',
+      stroke: 'black',
+  },
+  )
 
    /* Agregamos al DOM la visualización chartMap */
    d3.select(".plot-1be9c9ca248f2")
