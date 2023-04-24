@@ -13,17 +13,20 @@ html{
 
 
 .description{
-  margin-top: 30px;
+  /* margin-top: 30px; */
   max-width: 800px;
-  font-size: 18px;
+  font-size: 20px;
+  color: #0e0e0e;
 }
 
 .graph-description{
-  margin-top: -40px;
+  margin-top: -10px;
   margin-bottom: 100px;
   /* margin-left: 100px; */
   max-width: 800px;
-  font-size: 18px;
+  /* font-size: 18px; */
+  color: #8c8c8c;
+  font-size: 14px;
 }
 
 body {
@@ -201,17 +204,12 @@ margin-bottom: 80px;
 /* margin-top: 75px; */
 }
 
-.text-big{
-  margin-top: 40px;
-}
 
 .section-title{
 color: #0e0e0e;
-font-size: 30px;
+font-size: 32px;
 }
-.description{
-color: #0e0e0e;
-}
+
 
 
 /* .button-container{
@@ -280,11 +278,6 @@ height: 400px;
 margin-bottom: 50px;
 } */
 
-
-.graph-description {
-font-size: 14px;
-color: #3d3d3d;
-}
 
 
 /* where to stop when scrollings */
