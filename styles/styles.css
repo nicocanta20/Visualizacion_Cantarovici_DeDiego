@@ -119,11 +119,10 @@ nav {
         }
     
     
-    .scrolled .home{
+    /* .scrolled .home{
         color: white;
         display: block;
-        /* add animation when appearing */
-      }
+      } */
     
     .navbar a {
     color: rgb(255, 255, 255);
@@ -132,7 +131,7 @@ nav {
     
     .home{ 
         user-select: none;    
-        color: #0e0e0e;
+        color: #ffffff;
         text-align: center;
         font-size: 28px;
         font-weight: bold;
