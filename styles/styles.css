@@ -378,6 +378,10 @@ footer {
   justify-content: center;
 }
 
+#footer_integrantes p{
+  font-size: 16px;
+}
+
 
 #footer_icons {
   display: flex;
@@ -402,7 +406,7 @@ footer {
 
 /*  */
 .site-header {
-  padding-top: 130px;
+  padding-top: 100px;
   padding-bottom: 60px;
   margin-bottom: 50px;
   /* background-color: #1d1d1d; */
