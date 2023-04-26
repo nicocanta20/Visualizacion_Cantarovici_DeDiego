@@ -358,13 +358,14 @@ footer {
   
   #footer_integrantes h1{
   color: white;
+  font-family: 'Supreme';
   }
   
 #footer_contents {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  flex-wrap: nowrap;
+  align-items: start;
+  /* flex-wrap: nowrap; */
   justify-content: space-around;
   padding-top: 50px;
 }
@@ -382,16 +383,41 @@ footer {
   font-size: 16px;
 }
 
+#footer_chart_links{
+    display: flex;
+        flex-direction: column;
+        align-items: left;
+        flex-wrap: nowrap;
+        /* no underline */
+        text-decoration: none;
+}
+
+#footer_chart_links a{
+  color: white;
+  font-size: 16px;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+
+
 
 #footer_icons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   flex-wrap: nowrap;
   justify-content: space-around;
   height: 100%;
-  gap: 20px;
-  width: 30vw;
+  gap: 30px;
+  /* width: 30vw; */
+}
+
+#footer_lasttext{
+  margin-top: 60px; 
+  padding: 0 140px; 
+  text-align: left;
+  font-size: 16px;
 }
 
 .icon {
@@ -405,7 +431,7 @@ footer {
 
 
 /*  */
-.site-header {
+#site-header {
   padding-top: 100px;
   padding-bottom: 60px;
   margin-bottom: 50px;

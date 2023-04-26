@@ -29,7 +29,7 @@
   <body>
     <nav>
         <ul class="navbar">
-            <li class ="home">The BA Insider</li>
+            <a href="#site-header"><li class ="home">The BA Insider</li></a>
           <!-- <li class="github"><a href="https://github.com/nicocanta20/Visualizacion_Cantarovici_DeDiego">Github</a></li> -->
           <!-- <li><button onclick="redirectToPage()" id="github" class="github"></button></li> -->
           <!-- <li><button onclick="toggleDark()" id="toggle"></button></li> -->
@@ -38,12 +38,12 @@
       </nav>
 
 
-      <div class="site-header">
+      <div id="site-header">
         <div class="header-container">
           <div class="header-title">
             <p><strong>BUENOS AIRES / NOTICIAS / RATAS</strong></p>
             <h1>La ciudad celebra disminución récord en ratas.</h1>
-            <h3><strong>/</strong>Según los datos recolectados a través de la linea 147 al Sistema Único de Atención Ciudadana (SUACI) de la ciudad, se pudo visualizar una notable reducción en la cantidad de quejas denunciadas. </h3>
+            <h3><strong>/</strong> Según los datos recolectados a través de la linea 147 al Sistema Único de Atención Ciudadana (SUACI) de la ciudad, se pudo visualizar una notable reducción en la cantidad de quejas denunciadas. </h3>
 
           </div>
           <div class="header-subtitle">
@@ -88,12 +88,12 @@
       </div>
     </div>
 
-    <div class="big" id="section1">
+    <div class="big" id="section2">
       <div class="section" >
         <h2 class="section-title">Trazando la ruta de las ratas</h2>
         <div id="chart2"></div>
         <div class="text-big">
-          <p class="graph-description">Cantidad de denuncias en los primeros meses del 2021.</p>
+          <p class="graph-description">Ranking top 5 en los primeros meses del 2021</p>
           <p class="description">Se ha llevado a cabo un análisis mensual de la cantidad de quejas por infestaciones de ratas en los cinco barrios más afectados de la ciudad de Buenos Aires. Los resultados mostraron grandes fluctuaciones de Enero a Marzo y una baja en la cantidad de quejas en todos los barrios a partir de este mes. En general, se pudo concluir que hubo una disminución total en la cantidad de infestaciones de ratas en la ciudad de Buenos Aires en la primera mitad del año actual. No obstante, a pesar de este gran logro, sigue siendo importante tener en cuenta que algunos barrios aún presentan una cantidad significativa de infestaciones de ratas. </p>
       </div>
       </div>
@@ -118,7 +118,6 @@
         <div class="text-big">
           <p class="description" style="margin-top: -30px;">En general, la disminución en la cantidad de quejas por infestaciones de ratas en los barrios más afectados de Buenos Aires es una noticia alentadora. Los datos proporcionados por el Sistema Único de Atención Ciudadana (SUACI) muestran que las medidas adoptadas por las autoridades y la conciencia pública pueden contribuir significativamente a la disminución de la población de ratas en la ciudad. Es crucial seguir trabajando en este tema para mantener este descenso en la cantidad de quejas y mejorar la calidad de vida de los residentes de Buenos Aires. Sin embargo, la cantidad de quejas puede estar relacionada con varios factores, entre ellos el clima, ya que a medida que se acerca a mitad de año, suele hacer más frío en Buenos Aires y las condiciones se vuelven menos favorables para la proliferación de ratas.</p>
        
-          <p class="description" style="margin-top: 50px;">En los estudios mencionados se utilizó  el análisis de datos del censo de la linea 147, desratización de la ciudad y los datos del ultimo censo que se realizó en el 2010. Es fundamental destacar que todos los datos presentados en este artículo son públicos. Para cada uno de los graficos se limpio y analizo la informacion usando el lenguaje de programacion Python y la libreria Pandas.</p>
         </div>
         </div>
       
@@ -131,17 +130,24 @@
         <p>Nicolas Cantarovici</p>
         <p>Valentina De Diego</p>
       </div>
+      <div id="footer_chart_links">
+        <h1 style="color: rgb(98, 98, 255)">Charts</h1>
+        <a class="footer_chart_link" href="#section1">Cantidad de denuncias por barrio.</a>
+        <a class="footer_chart_link" href="#section2">Ranking top 5 en los primeros meses del 2021.</a>
+        <a class="footer_chart_link" href="#section3">Mapa densidad de denuncias por barrio.</a>
+    </div>
       <div id="footer_links">
+        <h1 style="color: rgb(98, 98, 255)">Repositorio</h1>
         <div id="footer_icons">
-          <a class="icon_ref" href="https://www.utdt.edu/">
-            <img class="icon" src="assets/utdt.svg" alt="UTDT" />
-          </a>
           <a class="icon_ref" href="https://github.com/nicocanta20/Visualizacion_Cantarovici_DeDiego">
             <img class="icon" src="assets/gh.svg" alt="GitHub" />
           </a>
         </div>
       </div>
-    </div>
+
+  </div>
+  <p id="footer_lasttext">En los estudios mencionados se utilizó  el análisis de datos del censo de la linea 147, desratización de la ciudad y los datos del ultimo censo que se realizó en el 2010. Es fundamental destacar que todos los datos presentados en este artículo son públicos. Para cada uno de los graficos se limpio y analizo la informacion usando el lenguaje de programacion Python y la libreria Pandas.</p>
+
       </footer>
 
       <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
